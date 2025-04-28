@@ -10,9 +10,11 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var CalculadoraWorks: UILabel!
     @IBOutlet weak var CalculadoraResult: UILabel!
+    var last = false
+    
     
     var calculos: String = ""
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         borrarTodo()
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
         CalculadoraResult.text = ""
         CalculadoraWorks.text = ""
     }
-
+    
     @IBAction func acButton(_ sender: Any) {
         borrarTodo()
     }
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
             calculos.removeLast()
             CalculadoraWorks.text = calculos
         }
-
+        
     }
     
     @IBAction func porcentajeCalc(_ sender: Any) {
@@ -41,9 +43,14 @@ class ViewController: UIViewController {
     }
     
     func añadirAWorks(_ texto: String) {
+        if last && caracterEspecial(char: Character(texto)) == false {
+            calculos = ""
+        }
+        last = false
         calculos += texto
         CalculadoraWorks.text = calculos
     }
+    
     
     @IBAction func divisionCalc(_ sender: Any) {
         añadirAWorks("/")
@@ -61,21 +68,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func igualCalc(_ sender: Any) {
-        if(inputValido()){
+        if inputValido() {
             let checkCalculosPorcentaje = calculos.replacingOccurrences(of: "%", with: "*0.01")
-            let Expression = NSExpression(format: checkCalculosPorcentaje)
-
-            let result: Double = Expression.expressionValue(with: nil, context: nil) as! Double
-           let resultadoString = formatearreResultado(result)
-            CalculadoraResult.text = resultadoString
-        }else {
+            
+            let expressionConDecimales = convertirEnterosADecimales(checkCalculosPorcentaje)
+    
+            let Expression = NSExpression(format: expressionConDecimales)
+            
+            if let result = Expression.expressionValue(with: nil, context: nil) as? Double {
+                let resultadoString = formatearreResultado(result)
+                CalculadoraResult.text = resultadoString
+                calculos = resultadoString
+                CalculadoraWorks.text = calculos
+                last = true
+            }
+        } else {
             let alerta = UIAlertController(title: "Error en la entrada", message: "Verifica que la entrada sea correcta", preferredStyle: .alert)
-            alerta.addAction(UIAlertAction(title: "Okay", style: .default,))
+            alerta.addAction(UIAlertAction(title: "Okay", style: .default))
             self.present(alerta, animated: true, completion: nil)
         }
-        
-        
     }
+
+    
     
     func inputValido() -> Bool {
         var contador = 0
@@ -91,14 +105,21 @@ class ViewController: UIViewController {
         var anterior: Int = -1
         
         for index in funcCharIndexes {
-            if(index == 0) || (index == calculos.count-1) {
+            if(index == 0 && calculos[calculos.startIndex] != "-") || (index == calculos.count-1) {
                 return false
             }
             
             if(anterior != -1) {
-                if(index - anterior == 1) {
+                let currentIndex = calculos.index(calculos.startIndex, offsetBy: index)
+                let prevIndex = calculos.index(calculos.startIndex, offsetBy: anterior)
+                
+                if index - anterior == 1 {
+                    if calculos[currentIndex] == "-" && (calculos[prevIndex] == "*" || calculos[prevIndex] == "/") {
+                        continue
+                    }
                     return false
                 }
+                
             }
             anterior = index
         }
@@ -120,6 +141,14 @@ class ViewController: UIViewController {
             return String(format: "%.5f", result)
         }
     }
+    
+    func convertirEnterosADecimales(_ expression: String) -> String {
+        let pattern = #"(?<!\d)(\d+)(?![\d.])"#
+        let regex = try! NSRegularExpression(pattern: pattern)
+        let range = NSRange(location: 0, length: expression.utf16.count)
+        return regex.stringByReplacingMatches(in: expression, options: [], range: range, withTemplate: "$1.0")
+    }
+
     
     @IBAction func sieteCalc(_ sender: Any) {
         añadirAWorks("7")
