@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller Test-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalcSecondTry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewControllerTest" customModule="CalcSecondTry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="borrarUno:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DRG-A3-mod"/>
+                                                    <action selector="deleteOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0E-0V-CkL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzj-Ip-LwX">
@@ -80,7 +80,7 @@
                                                     <color key="baseForegroundColor" red="1" green="0.72419737169999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="porcentajeCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9a-9u-UXT"/>
+                                                    <action selector="percentageCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVq-9J-mUo"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCu-dW-4qD">
@@ -140,7 +140,7 @@
                                                     <color key="baseForegroundColor" red="1" green="0.72419737169999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="multiplicacionCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sFd-TH-nst"/>
+                                                    <action selector="timesCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CME-kY-xiP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -193,7 +193,7 @@
                                                     <color key="baseForegroundColor" red="1" green="0.72419737169999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="restaCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYs-UV-zaQ"/>
+                                                    <action selector="minusCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOG-Xx-x0u"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -242,7 +242,7 @@
                                                     <color key="baseForegroundColor" red="1" green="0.72419737169999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="sumaCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFX-rT-hRP"/>
+                                                    <action selector="plusCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdq-1K-XRX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -289,7 +289,7 @@
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="igualCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFb-q0-5ZG"/>
+                                                            <action selector="equalsCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zzI-CQ-0Bx"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -314,8 +314,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CalculadoraResult" destination="k7V-g0-n7R" id="6jC-9U-MAg"/>
-                        <outlet property="CalculadoraWorks" destination="9uZ-Ga-Zpe" id="eYJ-AI-SNg"/>
+                        <outlet property="CalculatorResultLabel" destination="k7V-g0-n7R" id="EmA-ZV-W49"/>
+                        <outlet property="CalculatorWorksLabel" destination="9uZ-Ga-Zpe" id="B5p-Za-d8a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -328,10 +328,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -29,22 +29,9 @@
 		0EF2DF072DA92D65003F052E /* CalcSecondTryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcSecondTryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0EF2DF0F2DA92D65003F052E /* Exceptions for "CalcSecondTry" folder in "CalcSecondTry" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 0EF2DEE62DA92D64003F052E /* CalcSecondTry */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0EF2DEE92DA92D64003F052E /* CalcSecondTry */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				0EF2DF0F2DA92D65003F052E /* Exceptions for "CalcSecondTry" folder in "CalcSecondTry" target */,
-			);
 			path = CalcSecondTry;
 			sourceTree = "<group>";
 		};
