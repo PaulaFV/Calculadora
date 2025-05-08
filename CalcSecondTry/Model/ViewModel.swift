@@ -1,6 +1,6 @@
 import Foundation
 
-class ViewModel {
+class ViewModel : ModelProtocol {
     
     private(set) var expression: String = ""
 

@@ -13,7 +13,7 @@ class ViewControllerTest:
     @IBOutlet weak var CalculatorWorksLabel: UILabel!
     @IBOutlet weak var CalculatorResultLabel: UILabel!
     
-    var model = ViewModel()
+    var model : ModelProtocol = ViewModel()
     var last = false
     
     override func viewDidLoad() {
@@ -55,6 +55,7 @@ class ViewControllerTest:
         }
         addToExpression("/")
     }
+    
     @IBAction func timesCalc(_ sender: Any) {
         if last {
             model.deleteAll()
@@ -63,6 +64,7 @@ class ViewControllerTest:
         }
         addToExpression("*")
     }
+    
     @IBAction func plusCalc(_ sender: Any) {
         if last {
             model.deleteAll()
@@ -71,6 +73,7 @@ class ViewControllerTest:
         }
         addToExpression("+")
     }
+    
     @IBAction func minusCalc(_ sender: Any) {
         if last {
             model.deleteAll()
@@ -107,17 +110,47 @@ class ViewControllerTest:
         updateView()
     }
     
-    @IBAction func ceroCalc(_ sender: Any) { addToExpression("0") }
-    @IBAction func unoCalc(_ sender: Any) { addToExpression("1") }
-    @IBAction func dosCalc(_ sender: Any) { addToExpression("2") }
-    @IBAction func tresCalc(_ sender: Any) { addToExpression("3") }
-    @IBAction func cuatroCalc(_ sender: Any) { addToExpression("4") }
-    @IBAction func cincoCalc(_ sender: Any) { addToExpression("5") }
-    @IBAction func seisCalc(_ sender: Any) { addToExpression("6") }
-    @IBAction func sieteCalc(_ sender: Any) { addToExpression("7") }
-    @IBAction func ochoCalc(_ sender: Any) { addToExpression("8") }
-    @IBAction func nueveCalc(_ sender: Any) { addToExpression("9") }
-    @IBAction func puntoCalc(_ sender: Any) { addToExpression(".") }
+    @IBAction func zeroCalcButton(_ sender: Any) {
+        addToExpression("0")
+    }
+    
+    @IBAction func oneCalcButton(_ sender: Any) {
+        addToExpression("1")
+    }
+    
+    @IBAction func twoCalcButton(_ sender: Any) {
+        addToExpression("2")
+    }
+    
+    @IBAction func threeCalcButton(_ sender: Any) {
+        addToExpression("3")
+    }
+    
+    @IBAction func fourCalcButton(_ sender: Any) {
+        addToExpression("4")
+    }
+    
+    @IBAction func fiveCalcButton(_ sender: Any) {
+        addToExpression("5")
+    }
+    
+    @IBAction func sixCalcButton(_ sender: Any) {
+        addToExpression("6")
+    }
+    
+    @IBAction func sevenCalcButton(_ sender: Any) {
+        addToExpression("7")
+    }
+    
+    @IBAction func eightCalcButton(_ sender: Any) {
+        addToExpression("8")
+    }
+   
+    @IBAction func nineCalcButton(_ sender: Any) {
+        addToExpression("9")
+    }
+    
+    @IBAction func dotCalcButton(_ sender: Any) {
+        addToExpression(".")
+    }
 }
-
-

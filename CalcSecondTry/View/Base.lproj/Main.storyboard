@@ -107,7 +107,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="sieteCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sem-21-X4D"/>
+                                                    <action selector="sevenCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0h-Ib-m2Q"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-XJ-Rcw">
@@ -118,7 +118,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="ochoCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cAW-gG-DTS"/>
+                                                    <action selector="eightCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSD-gF-8XF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaN-NY-vs3">
@@ -129,7 +129,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nueveCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEl-6q-B3G"/>
+                                                    <action selector="nineCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4mx-zj-RWW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI6-Wq-i9d">
@@ -160,7 +160,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="cuatroCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oK-KF-Vsi"/>
+                                                    <action selector="fourCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3o-GS-Ld3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaO-Gf-QGv">
@@ -171,7 +171,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="cincoCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8jj-EL-jBm"/>
+                                                    <action selector="fiveCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3D-oO-9yc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1O-lW-MwX">
@@ -182,7 +182,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="seisCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0m-XN-uam"/>
+                                                    <action selector="sixCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qe-dk-HCb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3g-ev-XpJ">
@@ -209,7 +209,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="unoCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeN-Ed-QBW"/>
+                                                    <action selector="oneCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmh-HF-7xv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhJ-j5-r3r">
@@ -220,7 +220,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="dosCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzB-uy-8v3"/>
+                                                    <action selector="twoCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V1K-cJ-5i4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUI-rH-hnI">
@@ -231,7 +231,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="tresCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2h-5N-N46"/>
+                                                    <action selector="threeCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TfZ-zb-kQk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fp-1m-FCl">
@@ -243,6 +243,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="plusCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdq-1K-XRX"/>
+                                                    <action selector="threeCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyJ-dd-jnD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -261,7 +262,7 @@
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="puntoCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rNe-lk-Lyf"/>
+                                                            <action selector="dotCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ezn-x2-6UH"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDJ-lc-QzL">
@@ -272,7 +273,7 @@
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="ceroCalc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDs-ti-4uw"/>
+                                                            <action selector="zeroCalcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qx2-bc-tIC"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
